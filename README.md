@@ -7,7 +7,7 @@ In the command line run "node server.js" and in the browser type "localhost:8080
 
 the "node server.js" command connects the client to the server in order to display the app.
 
-# Technology used
+## Technology used
 -mySQL
 -html
 -Javascript
@@ -15,7 +15,7 @@ the "node server.js" command connects the client to the server in order to displ
 -node
 -handlebars
 
-#NPM modules used
+## NPM modules used
 -express
 -mySQL
 -body parser
