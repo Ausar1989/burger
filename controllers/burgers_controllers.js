@@ -4,11 +4,12 @@ var burger = require("../models/burger");
 var router = express.Router();
 
 router.get("/", function(req, res){
+    // console.log('yo')
     burger.selectAll(function(data){
         var handleObj = {
             burgers:data
         };
-        console.log(handleObj);
+        // console.log(handleObj);
         res.render("index", handleObj);
     });
 });
@@ -16,7 +17,7 @@ router.get("/", function(req, res){
 router.post("/api/burgers", function(req, res){
     burger.insertOne(
         ["buger_name", "devoured"],
-        [reg.body.burger_name, req.body.devoured],
+        [req.body.burger_name, req.body.devoured],
         function(result) {
             res.json({ id: result.insertId});
         }

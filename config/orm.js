@@ -34,7 +34,7 @@ var orm = {
         });
     },
     insertOne: function(table, cols, vals, cb) {
-        var dbQuery = "INSERT INTO " + table + " (" + cols.toString() + ")" + "VALUES (" + createQmakrs(vals.length) + ")";
+        var dbQuery = "INSERT INTO " + table + " (" + cols.toString() + ")" + " VALUES (" + createQmakrs(vals.length) + ")";
         console.log(dbQuery);
         connection.query(dbQuery, function(err, res) {
             if (err) {
